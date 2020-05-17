@@ -7,13 +7,13 @@
       </div>
       <van-tabs>
         <van-tab title="热歌榜">
-          <MusicList type="2" size="6" />
+          <MusicBillList type="2" size="6" />
         </van-tab>
         <van-tab title="新歌榜">
-          <MusicList type="1" size="6" />
+          <MusicBillList type="1" size="6" />
         </van-tab>
         <van-tab title="King榜">
-          <MusicList type="24" size="6" />
+          <MusicBillList type="24" size="6" />
         </van-tab>
       </van-tabs>
       <div class="look-more">
@@ -24,7 +24,8 @@
 </template>
 <script>
 import MusicList from "./MusicList";
-import {getTodayList} from '../../api/music-api'
+import MusicBillList from '../Home/MusicBillList'
+// import {getTodayList} from '../../api/music-api'
 export default {
     props:{
         type:String,
@@ -32,12 +33,13 @@ export default {
         title:String
     },
     created() {
-        getTodayList(this.type,this.size).then(res=>{
+        // getTodayList(this.type,6).then(res=>{
 
-        })
+        // })
     },
     components:{
-        MusicList
+        MusicList,
+        MusicBillList
     }
 };
 </script>

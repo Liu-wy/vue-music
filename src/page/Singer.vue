@@ -54,7 +54,7 @@ export default {
             singerObj.avatar_big = res.data.avatar_big;
             singerObj.ting_uid = res.data.ting_uid;
             this.SingList.push(singerObj);
-            console.log(this.SingList);
+            // console.log(this.SingList);
           })
           .catch();
       }
