@@ -4,13 +4,13 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 
-import axios from 'axios'
-Vue.prototype.$axios = axios
+// import axios from 'axios'
+// Vue.prototype.$axios = axios
 import VueAxios from 'vue-axios'
 //导入我们封装的http实例,把axios挂载到http上，在全局都可以通过this.去访问
 import http from './api/http'
 Vue.use(VueAxios, http)
-Vue.use(VueAxios, axios)
+// Vue.use(VueAxios, axios)
 
 import { Tabbar, TabbarItem, Tab, Tabs, PullRefresh, Toast, List, Cell, CellGroup, Icon, Search, Dialog } from 'vant';
 Vue.use(Tabbar);
